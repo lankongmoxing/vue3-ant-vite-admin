@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-const layout = () => import('/@/layout/index.vue')
+const layout = () => import('@/layout/index.vue')
 // 在 Vue-router新版本中，需要使用createRouter来创建路由
 
 
@@ -21,6 +21,25 @@ const constantRoutes = [
         component: () => import('./../views/home/index.vue'),
         meta: {
           title: '首页',
+          icon: 'icon-home'
+        }
+      }
+    ]
+  },
+  {
+    path: '/table',
+    redirect: '/table/index',
+    component: layout,
+    meta: {
+      title: '表格',
+      icon: 'icon-home',
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('./../views/table/index.vue'),
+        meta: {
+          title: '表格',
           icon: 'icon-home'
         }
       }
