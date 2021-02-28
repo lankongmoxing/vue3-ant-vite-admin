@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build:test": "vite build --test",
+    "build:prod": "vite build"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^1.1.4",

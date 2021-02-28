@@ -8,7 +8,9 @@
 import zhCN from "ant-design-vue/es/locale/zh_CN";
 export default {
   name: "App",
-  created() {},
+  created() {
+    console.log(import.meta.env.MODE)
+  },
   data() {
     return {
       locale: zhCN,
